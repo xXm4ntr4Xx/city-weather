@@ -13,7 +13,7 @@ let cityButton = document.querySelector("#city-button");
  
 
 //city weather info
-   async function fetchCity(){
+   let cityFetch = async function fetchCity(){
      
     const cityString = cityTextInput.value;
     //check if the input field is empty
@@ -58,7 +58,9 @@ let cityButton = document.querySelector("#city-button");
 
 
 
-cityButton.addEventListener("submit",fetchCity);
+cityButton.addEventListener("submit",cityFetch);
+
+
 
 
 

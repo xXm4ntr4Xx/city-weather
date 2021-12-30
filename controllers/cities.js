@@ -1,12 +1,11 @@
 //dependencies that allow to create random id
 import { v4 as uuid } from 'uuid';
 
-let cities = [{city: 'Milan', country: 'Italy', region: 'Lombardia', temperature: 4, skyCondition: 'Fog'}];
+
+let cities = [{id:uuid(), city: 'Milan', country: 'Italy', region: 'Lombardia', temperature: 4, skyCondition: 'Fog'}];
 
 //get the array with all the cities
 export const getCities = (req, res) => {
-    console.log(`Cities in the database: ${cities}`);
-
     res.send(cities);
 }
 //create a new city and push the random id dependencies inside every new city

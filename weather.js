@@ -1,4 +1,4 @@
-  let citiesArray = [];
+ const citiesArray = [];
 
 let city = document.querySelector(".weather-city");
 let country = document.querySelector(".weather-country");
@@ -8,12 +8,12 @@ let wind = document.querySelector(".weather-wind");
 let cityTextInput = document.querySelector(".city-text");
 let cityButton = document.querySelector("#city-button");
 
-
-
+ 
+ 
 
 //city weather info
-  async function fetchCity(){
-     let newObject={};
+   async function fetchCity(){
+     
     const cityString = cityTextInput.value;
     //check if the input field is empty
     if(cityString ==="") {alert("No string available"); return false }
@@ -38,7 +38,7 @@ let cityButton = document.querySelector("#city-button");
     sky.innerHTML=skyCondition;
     wind.innerHTML=windSpeed;   
 
-    newObject={
+    let newObject ={
         "city": cityName,
         "country": countryName,
         "region": regionName,
@@ -53,7 +53,7 @@ let cityButton = document.querySelector("#city-button");
 
 
 
-cityButton.addEventListener("submit",fetchCity)
+cityButton.addEventListener("submit",fetchCity);
 
 
 

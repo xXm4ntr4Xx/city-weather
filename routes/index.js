@@ -1,21 +1,17 @@
-import express from 'express';
-var router = express.Router();
+import express from "express";
 
+const router = express.Router();
 
-
-
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Main Page' });
+router.get('/', (req,res) => {
+  console.log("hello")
 });
 
-router.get("/cities",(req, res,)=>{
-  res.json({ 
-    succes:true,
-    message:"all cities",
-    payload: citiesArray
-  })
-})
+// router.get('/:id',);
+
+// router.post('/',);
+
+// router.delete('/:id',);
+
+// router.patch('/:id', );
 
 export default router;

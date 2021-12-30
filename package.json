@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./routes/index.js"
+    "dev": "nodemon ./app.js"
   },
   "dependencies": {
+    "body-parser": "^1.19.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -20,8 +21,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "��#\u0000 \u0000c\u0000i\u0000t\u0000y\u0000-\u0000w\u0000e\u0000a\u0000t\u0000h\u0000e\u0000r\u0000\r\u0000 \u0000",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "bin": {
+    "generator": "bin/www.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xXm4ntr4Xx/city-weather.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xXm4ntr4Xx/city-weather/issues"
+  },
+  "homepage": "https://github.com/xXm4ntr4Xx/city-weather#readme"
 }

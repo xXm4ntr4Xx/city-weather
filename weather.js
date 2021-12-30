@@ -1,8 +1,9 @@
- const citiesArray = [];
+const citiesArray = [];
 
 let city = document.querySelector(".weather-city");
 let country = document.querySelector(".weather-country");
 let region = document.querySelector(".weather-region");
+let temperature = document.querySelector(".weather-temperature");
 let sky = document.querySelector(".weather-sky");
 let wind = document.querySelector(".weather-wind");
 let cityTextInput = document.querySelector(".city-text");
@@ -28,13 +29,16 @@ let cityButton = document.querySelector("#city-button");
     let cityName = data.location.name;
     let countryName = data.location.country;
     let regionName = data.location.region;
+    let temperatureC = data.current.temp_c;
     let skyCondition = data.current.condition.text;
     let windSpeed = data.current.wind_kph;
 
+    
 
     city.innerHTML=cityName;
     country.innerHTML=countryName;
     region.innerHTML=regionName;
+    temperature.innerHTML=temperatureC;
     sky.innerHTML=skyCondition;
     wind.innerHTML=windSpeed;   
 
@@ -42,6 +46,7 @@ let cityButton = document.querySelector("#city-button");
         "city": cityName,
         "country": countryName,
         "region": regionName,
+        "temperature": temperatureC,
         "skyCondition": skyCondition,
         "windSpeed": windSpeed
     }

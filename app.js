@@ -1,16 +1,33 @@
-import express from "express";
-import bodyParser from "body-parser";
+import express from 'express';
+import path from 'path';
 
-import usersRoutes from "./routes/index.js";
+import __dirname  from './dirname.js';
+import cookieParser  from 'cookie-parser';
+import cors  from 'cors';
+import logger  from 'morgan';
 
+import cityRouter  from './routes/cities.js';
 
 const app = express();
-const PORT = 3000;
 
-app.use(bodyParser.json());
+app.use(logger('dev'));
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/cities", usersRoutes);
-app.get("/", (req, res) => res.send("Welcome to the Cities API!"));
-app.all("*", (req, res) =>res.send("You've tried reaching a route that doesn't exist."));
+app.use('/cities', cityRouter);
 
-app.listen(PORT, () =>console.log(`Server running on port: http://localhost:${PORT}`));
+app.use(function (req, res, next) {
+  res.status(404).json({message: "We couldn't find what you were looking for 😞"})
+})
+
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).json(err)
+})
+
+
+
+export default app;

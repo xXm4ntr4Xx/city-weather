@@ -1,0 +1,84 @@
+
+body {
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: 100vh;
+  width: auto;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap:5px;
+}
+
+.container-main{
+  background-color:rgb(207, 207, 207);
+  text-align: center;
+  border-style:  solid black 20px;
+  grid-column:  2 /4;
+  
+  
+}
+.title-container{
+  text-align: center;
+} .title-container > h1{
+  font-size:60px;
+}
+.weather-stats-container > span{
+ font-size:30px;
+ color: rgb(131, 131, 129);
+}
+.weather-stats-container > p{
+  font-size:30px;
+  color: rgb(34, 34, 34);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+.city-info{
+  background-color:rgb(245, 245, 245);
+}
+.city-info > p {
+text-align: center;
+font-size: 100px;
+font-style: oblique;
+}
+.city-info > span{
+  border-bottom: 1px solid black;
+  }
+  #city-button{
+    margin-top:20px;
+    margin-left: 40%;
+    
+  }
+  .city-text{
+    margin-top:5%;
+    margin-left: 30%;
+  }
+
+.box1{
+  background-color:#666565;
+}
+.box2{
+  background-color:#666565;
+}
+.box3{
+  background-color:rgb(179, 179, 179);
+}
+.box4{
+  background-color:#666565;
+}
+.box5{
+  background-color:#666565;
+}
+.box6{
+  background-color:rgb(179, 179, 179);
+}
+.box7{
+  background-color:#666565;
+}
+.box8{
+  background-color:#666565;
+}
+.box9{
+  background-color:rgb(179, 179, 179);
+}
+

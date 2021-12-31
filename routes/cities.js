@@ -1,8 +1,14 @@
-import express from "express";
+import express from 'express';
+
+import {
+  createCity,
+  deleteCity,
+  getCities,
+  getCity,
+  updateCity,
+} from '../controllers/cities.js';
 
 const router = express.Router();
-
-import { getCities, createCity, getCity, deleteCity, updateCity } from '../controllers/cities.js';
 
 //get all the cities
 router.get('/', getCities);

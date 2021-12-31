@@ -2,7 +2,19 @@
 import { v4 as uuid } from 'uuid';
 
 
-let cities = [{id:uuid(), city: 'Milan', country: 'Italy', region: 'Lombardia', temperature: 4, skyCondition: 'Fog'}];
+
+
+//list of cities
+let cities = [
+    {id:uuid(), city: 'Milan', country: 'Italy', region: 'Lombardia', temperature: 4, skyCondition: 'Fog'},
+    {id:uuid(),city: 'London', country: 'United Kingdom', region: 'City of London, Greater London', temperature: 14, skyCondition: 'Overcast'},
+    {id:uuid(),city: 'Madrid', country: 'Spain', region: 'Madrid', temperature: 9, skyCondition: 'Clear'},
+    {id:uuid(),city: 'Berlin', country: 'Germany', region: 'Berlin', temperature: 12, skyCondition: 'Light rain'},
+    {id:uuid(),city: 'Moscow', country: 'Russia', region: 'Moscow City', temperature: -4, skyCondition: 'Light snow showers'},
+    {id:uuid(),city: 'Paris', country: 'France', region: 'Ile-de-France', temperature: 12, skyCondition: 'Partly cloudy'},
+    {id:uuid(),city: 'Vienna', country: 'Austria', region: 'Wien', temperature: 13, skyCondition: 'Partly cloudy'}
+
+];
 
 //get the array with all the cities
 export const getCities = (req, res) => {

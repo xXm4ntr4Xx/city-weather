@@ -1,6 +1,10 @@
 
+
+
+
 const citiesArray = [];
 
+let iconImage = document.querySelector(".weather-icon");
 let city = document.querySelector(".weather-city");
 let country = document.querySelector(".weather-country");
 let region = document.querySelector(".weather-region");
@@ -11,10 +15,10 @@ let cityTextInput = document.querySelector(".city-text");
 let cityButton = document.querySelector("#city-button");
 
  
- 
+
 
 //city weather info
-    async function fetchCity(){
+     async function fetchCity(){
      
     const cityString = cityTextInput.value;
     //check if the input field is empty
@@ -33,6 +37,7 @@ let cityButton = document.querySelector("#city-button");
     let temperatureC = data.current.temp_c;
     let skyCondition = data.current.condition.text;
     let windSpeed = data.current.wind_kph;
+    let weatherIcon = data.current.condition.icon
 
     
 
@@ -41,7 +46,8 @@ let cityButton = document.querySelector("#city-button");
     region.innerHTML=regionName;
     temperature.innerHTML=temperatureC;
     sky.innerHTML=skyCondition;
-    wind.innerHTML=windSpeed;   
+    wind.innerHTML=windSpeed;
+    iconImage.src= weatherIcon;
 
     let newObject ={
         "city": cityName,
@@ -53,13 +59,13 @@ let cityButton = document.querySelector("#city-button");
     }
 
     citiesArray.push(newObject);
-
+    
     console.log(citiesArray)
 }
 
 
-
 cityButton.addEventListener("submit",fetchCity);
+
 
 
 

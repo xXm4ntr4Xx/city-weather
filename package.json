@@ -11,6 +11,7 @@
     "body-parser": "^1.19.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
@@ -23,6 +24,7 @@
   "license": "ISC",
   "description": "��#\u0000 \u0000c\u0000i\u0000t\u0000y\u0000-\u0000w\u0000e\u0000a\u0000t\u0000h\u0000e\u0000r\u0000\r\u0000 \u0000",
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "nodemon": "^2.0.15"
   },
   "bin": {

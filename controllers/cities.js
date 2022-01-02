@@ -1,9 +1,6 @@
 //dependencies that allow to create random id
 import { v4 as uuid } from 'uuid';
 
-
-
-
 //list of cities
 let cities = [
     {id:uuid(), city: 'Milan', country: 'Italy', region: 'Lombardia', temperature: 4, skyCondition: 'Fog'},

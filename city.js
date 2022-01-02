@@ -1,7 +1,5 @@
 
 
-
-
 const citiesArray = [];
 
 let iconImage = document.querySelector(".weather-icon");
@@ -14,12 +12,14 @@ let wind = document.querySelector(".weather-wind");
 let cityTextInput = document.querySelector(".city-text");
 let cityButton = document.querySelector("#city-button");
 
- 
+
+
 
 
 //city weather info
-     async function fetchCity(){
-     
+    async function fetchCity(){
+
+ 
     const cityString = cityTextInput.value;
     //check if the input field is empty
     if(cityString ==="") {alert("No string available"); return false }
@@ -62,6 +62,7 @@ let cityButton = document.querySelector("#city-button");
     
     console.log(citiesArray)
 }
+
 
 
 cityButton.addEventListener("submit",fetchCity);

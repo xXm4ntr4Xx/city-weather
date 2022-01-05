@@ -60,7 +60,15 @@ let cityButton = document.querySelector("#city-button");
     citiesArray.push(newObject);
     
     console.log(citiesArray)
+
+//     const res = await fetch("http://localhost:3000/cities", {
+//     headers: { "Content-Type": "application/json" },
+//     method: "POST",
+//     body: JSON.stringify(newObject),
+//   });
 }
+
+
 
 
 

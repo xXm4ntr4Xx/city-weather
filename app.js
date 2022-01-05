@@ -9,6 +9,7 @@ import logger  from 'morgan';
 import cityRouter  from './routes/cities.js';
 
 const app = express();
+const port = 3000;
 
 app.use(logger('dev'));
 app.use(cors());
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+
 
 app.use('/cities', cityRouter);
 
@@ -29,5 +31,7 @@ app.use(function (err, req, res, next) {
 })
 
 
-app.listen(3000);
+
+
+app.listen(process.env.PORT || port);
 export default app;

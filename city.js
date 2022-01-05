@@ -17,7 +17,7 @@ let cityButton = document.querySelector("#city-button");
 
 
 //city weather info
-    async function fetchCity(){
+    export async function fetchCity(){
  
     const cityString = cityTextInput.value;
     //check if the input field is empty
@@ -57,15 +57,11 @@ let cityButton = document.querySelector("#city-button");
         "windSpeed": windSpeed
     }
 
+    
     citiesArray.push(newObject);
     
     console.log(citiesArray)
 
-//     const res = await fetch("http://localhost:3000/cities", {
-//     headers: { "Content-Type": "application/json" },
-//     method: "POST",
-//     body: JSON.stringify(newObject),
-//   });
 }
 
 

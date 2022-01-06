@@ -17,7 +17,7 @@ let cityButton = document.querySelector("#city-button");
 
 
 //city weather info
-    export async function fetchCity(){
+     async function fetchCity(){
  
     const cityString = cityTextInput.value;
     //check if the input field is empty

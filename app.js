@@ -1,5 +1,7 @@
 import express from 'express';
 import path from 'path';
+import dotenv from 'dotenv';
+import  env  from'env-var';
 
 import __dirname  from './dirname.js';
 import cookieParser  from 'cookie-parser';
@@ -8,9 +10,20 @@ import logger  from 'morgan';
 
 import cityRouter  from './routes/cities.js';
 
+
+
+
+
+// Read the MY_VAR entry that dotenv created
+
+dotenv.config()
+env.get('MY_VAR').asString()
+
+
 const app = express();
 const port = 3000;
 
+dotenv.config()
 app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());

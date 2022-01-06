@@ -5,12 +5,19 @@
   "type": "module",
   "scripts": {
     "start": "node ./bin/www.js",
-    "dev": "nodemon ../bin/www.js"
+    "dev": "nodemon ../bin/www.js",
+    "start1": "node -r dotenv/config app.js",
+    "dbCreateCity": "node -r dotenv/config ./db/scripts1/createCity.js",
+    "dbpopulateCity": "node -r dotenv/config ./scripts1/populateCity.js",
+    "dotenv": "node -r dotenv/config test.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
+    "db": "^3.3.1",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "env-var": "^7.1.1",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.15",
@@ -32,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/xXm4ntr4Xx/city-weather/issues"
   },
-  "homepage": "https://github.com/xXm4ntr4Xx/city-weather#readme"
+  "homepage": "https://github.com/xXm4ntr4Xx/city-weather#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
 }

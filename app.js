@@ -16,14 +16,14 @@ import cityRouter  from './routes/cities.js';
 
 // Read the MY_VAR entry that dotenv created
 
-dotenv.config()
-env.get('MY_VAR').asString()
+dotenv.config();
+env.get('MY_VAR').asString();
 
 
 const app = express();
 const port = 3000;
 
-dotenv.config()
+dotenv.config();
 app.use(logger('dev'));
 app.use(cors());
 app.use(express.json());
@@ -39,8 +39,8 @@ app.use(function (req, res, next) {
 })
 
 app.use(function (err, req, res, next) {
-  console.error(err.stack)
-  res.status(500).json(err)
+  console.error(err.stack);
+  res.status(500).json(err);
 })
 
 

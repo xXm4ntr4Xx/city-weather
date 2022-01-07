@@ -1,5 +1,5 @@
 import express from 'express';
-// import res from 'express/lib/response';
+
 
 import {
   createCity,
@@ -21,12 +21,6 @@ router.post("/cities",(req,res) => {
 
 // get all the cities
 router.get('/', getCities);
-
-// router.get('/', function(req,res){
-//   console.log(cityList)
-//   res.sendStatus(200);
-// });
-
 //create new city
 router.post('/', createCity);
 // get the city by id

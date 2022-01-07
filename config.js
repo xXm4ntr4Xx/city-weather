@@ -1,5 +1,4 @@
 
-
 export const db ={
     dbhost: process.env.DB_HOST,
     dbname: process.env.DB_NAME,

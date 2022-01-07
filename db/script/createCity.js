@@ -1,10 +1,10 @@
 import query from "../index.js";
 
-const sqlString = `CREATE TABLE IF NOT EXISTS books (id SERIAL PRIMARY KEY, title TEXT, author TEXT)`;
+const sqlString = `CREATE TABLE IF NOT EXISTS city(id SERIAL PRIMARY KEY, title TEXT, author TEXT)`;
 
-async function createBooksTable() {
+async function createCity() {
   const res = await query(sqlString);
-  console.log("Created books table", res);
+  console.log("Created city table", res);
 }
 
 createBooksTable();

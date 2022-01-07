@@ -1,4 +1,4 @@
-
+import { populateTable } from "./db/script/populateTable";
 
 const citiesArray = [];
 
@@ -40,12 +40,12 @@ let cityButton = document.querySelector("#city-button");
 
     
 
-    city.innerHTML=cityName;
-    country.innerHTML=countryName;
-    region.innerHTML=regionName;
-    temperature.innerHTML=temperatureC;
-    sky.innerHTML=skyCondition;
-    wind.innerHTML=windSpeed;
+    city.textContent=cityName;
+    country.textContent=countryName;
+    region.textContent=regionName;
+    temperature.textContent=temperatureC;
+    sky.textContent=skyCondition;
+    wind.textContent=windSpeed;
     iconImage.src= weatherIcon;
 
     let newObject ={
@@ -61,7 +61,7 @@ let cityButton = document.querySelector("#city-button");
     citiesArray.push(newObject);
     
     console.log(citiesArray)
-
+    populateTable(cityName,countryName,regionName,temperatureC,skyCondition,windSpeed);
 }
 
 

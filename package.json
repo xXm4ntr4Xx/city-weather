@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node ./bin/www.js",
+    "start": "cross-env NODE_ENV=dev node app.js",
     "dev": "nodemon ../bin/www.js",
-    "start1": "node -r dotenv/config app.js",
-    "dbCreateCity": "node -r dotenv/config ./db/scripts1/createCity.js",
-    "dbpopulateCity": "node -r dotenv/config ./scripts1/populateCity.js",
+    "dbcreateTable": "node -r dotenv/config ./db/script/createTable.js",
+    "dbpopulateTable": "node -r dotenv/config ./db/script/populateTable.js",
+    "dbdeleteTable": "node -r dotenv/config ./db/script/deleteTable.js",
     "dotenv": "node -r dotenv/config test.js"
   },
   "dependencies": {

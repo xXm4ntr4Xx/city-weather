@@ -1,7 +1,7 @@
 import query from "../index.js";
 
 
-async function populateCity() {
+async function populateTable() {
   
     const res = await query(
       `INSERT INTO city(title, author) VALUES ($1, $2) RETURNING title`,
@@ -11,4 +11,4 @@ async function populateCity() {
   }
 
 
-populateCity();
+populateTable();

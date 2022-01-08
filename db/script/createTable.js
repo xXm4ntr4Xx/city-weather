@@ -1,13 +1,7 @@
 import query from "../index.js";
 
-const sqlString = `CREATE TABLE IF NOT EXISTS city(id SERIAL PRIMARY KEY, city Name TEXT, Region TEXT, Temperature TEXT, Sky Condition TEXT, Wind Speed TEXT)`;
+const sqlString = `CREATE TABLE IF NOT EXISTS city(id SERIAL PRIMARY KEY, City_Name VARCHAR(50),Country_Name VARCHAR(50), Region VARCHAR(50), Temperature VARCHAR(50), Sky_Condition VARCHAR(50), Wind_Speed VARCHAR(50))`;
 
-/*"city": cityName,
-        "country": countryName,
-        "region": regionName,
-        "temperature": temperatureC,
-        "skyCondition": skyCondition,
-        "windSpeed": windSpeed*/ 
 
 async function createTable() {
   const res = await query(sqlString);

@@ -1,4 +1,4 @@
-import { populateTable } from "./db/script/populateTable";
+
 
 const citiesArray = [];
 
@@ -17,14 +17,14 @@ let cityButton = document.querySelector("#city-button");
 
 
 //city weather info
-     async function fetchCity(){
+     export async function fetchCity(){
  
     const cityString = cityTextInput.value;
     //check if the input field is empty
     if(cityString ==="") {alert("No string available"); return false }
 
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=f739b39bdff8485db8f203020212312&q=${cityString}&aqi=no`)
-    const data = await response.json();
+    const response =  await fetch(`https://api.weatherapi.com/v1/current.json?key=f739b39bdff8485db8f203020212312&q=${cityString}&aqi=no`)
+    const data =  await response.json();
 
     cityTextInput.value = "";
     

@@ -4,12 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "cross-env NODE_ENV=dev node app.js",
+    "start": "cross-env NODE_ENV=dev node main.js",
     "dev": "nodemon ../bin/www.js",
     "dbcreateTable": "node -r dotenv/config ./db/script/createTable.js",
     "dbpopulateTable": "node -r dotenv/config ./db/script/populateTable.js",
     "dbdeleteTable": "node -r dotenv/config ./db/script/deleteTable.js",
-    "dotenv": "node -r dotenv/config test.js"
+    "dotenv": "node -r dotenv/config test.js",
+    "test": "jest"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
